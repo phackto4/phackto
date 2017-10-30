@@ -26,18 +26,18 @@ public class isSumTree{
 	
 	void inorderTraversal(Node node){
 		
-		if(node==null)
+		if(node==null){
 			return;
-		
+		}
 		inorderTraversal(node.left);
 		System.out.print(node.key+" ");
 		inorderTraversal(node.right);
 		
 	}
 	static int treeSum(Node node){
-		if(node== null)
+		if(node== null){
 			return 0;
-		
+		}
 		return treeSum(node.left)+node.key+treeSum(node.right);
 		
 	}
@@ -60,12 +60,12 @@ public class isSumTree{
 	}
 	
 	static int isLeaf(Node node){
-		if(node==null)
+		if(node==null){
 			return 0;
-		
-		if(node.left==null && node.right==null)
+		}
+		if(node.left==null && node.right==null){
 			return 1;
-			
+		}
 		return 0;
 	}
 	static int isSumTreeTricky(Node node){
@@ -78,26 +78,26 @@ public class isSumTree{
 			
 		if(isSumTreeTricky(node.left)!=0 && isSumTreeTricky(node.right)!=0){
 			
-			if(node.left==null)
-				ls=0;
-			else if(isLeaf(node.left)!=0)
-				ls=node.left.key;
-			else
+			if(node.left==null){
+				ls=0;}
+			else if(isLeaf(node.left)!=0){
+				ls=node.left.key;}
+			else{
 				ls=2*node.left.key;
-			
-			if(node.right==null)
-				rs=0;
-			else if(isLeaf(node.right)!=0)
-				rs=node.right.key;
-			else
+			}
+			if(node.right==null){
+				rs=0;}
+			else if(isLeaf(node.right)!=0){
+				rs=node.right.key;}
+			else{
 				rs=2*node.right.key;
-
+			}
 			
-			if(node.key==ls+rs)
-				return 1;
-			else
+			if(node.key==ls+rs){
+				return 1;}
+			else{
 				return 0;
-			
+			}
 		}
 		
 		return 0;
