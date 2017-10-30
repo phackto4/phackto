@@ -31,9 +31,9 @@ public class BuildTreeFromInOrderAndPreOrder{
 	
 	void inorderTraversal(Node node){
 		
-		if(node==null)
+		if(node==null){
 			return;
-		
+		}
 		inorderTraversal(node.left);
 		System.out.print(node.key+" ");
 		inorderTraversal(node.right);
@@ -42,9 +42,9 @@ public class BuildTreeFromInOrderAndPreOrder{
 	
 	void preorderTraversal(Node node){
 		
-		if(node==null)
+		if(node==null){
 			return;
-		
+		}
 		System.out.print(node.key+" ");
 		preorderTraversal(node.left);
 		preorderTraversal(node.right);
@@ -53,9 +53,9 @@ public class BuildTreeFromInOrderAndPreOrder{
 	
 	void postorderTraversal(Node node){
 		
-		if(node==null)
+		if(node==null){
 			return;
-		
+		}
 		postorderTraversal(node.left);
 		postorderTraversal(node.right);
 		System.out.print(node.key+" ");
@@ -65,9 +65,9 @@ public class BuildTreeFromInOrderAndPreOrder{
 	
 	Node buildTree(char in[],char pre[],int inStart,int inEnd){
 		
-		if(inStart>inEnd)
+		if(inStart>inEnd){
 			return null;
-		
+		}
 		Node tNode = new Node(pre[preIndex++]);
 		
 		if(inStart==inEnd)
