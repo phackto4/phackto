@@ -41,11 +41,11 @@ public class InorderSuccessor{
 			
 			node.next=nextNode[0];
 			
-			if(node.next!=null)
-				System.out.println(node.key+" "+node.next.key);
-			else
+			if(node.next!=null){
+				System.out.println(node.key+" "+node.next.key);}
+			else{
 				System.out.println(node.key+" "+"-1");
-			
+			}
 			nextNode[0]=node;
 			
 			populateNext(node.left,nextNode);
@@ -56,9 +56,9 @@ public class InorderSuccessor{
 	
 	static void inorderTraversal(Node node){
 		
-		if(node==null)
+		if(node==null){
 			return;
-		
+		}
 		inorderTraversal(node.left);
 		System.out.print(node.key+" ");
 		inorderTraversal(node.right);
@@ -66,9 +66,9 @@ public class InorderSuccessor{
 	}
 	static int treeSum(Node node){
 		
-		if(node==null)
+		if(node==null){
 			return 0;
-		
+		}
 		int oldSum=node.key;
 		
 		node.key=treeSum(node.left)+treeSum(node.right);
@@ -77,20 +77,20 @@ public class InorderSuccessor{
 	}
 	static void verticalSum(Node node){
 		
-		if(node==null)
+		if(node==null){
 			return;
-		
+		}
 		HashMap<Integer,Integer> hm=new HashMap<Integer,Integer>();
 		
 		verticalSumUtil(node,0,hm);
 		
-		if(hm!=null)
+		if(hm!=null){
 			System.out.println(hm.entrySet());
-		
+		}
 	}
 	static void verticalSumUtil(Node node,int horiDist,HashMap<Integer,Integer> hm){
-		if(node==null)
-			return;
+		if(node==null){
+			return;}
 		
 		verticalSumUtil(node.left,horiDist-1,hm);
 		
