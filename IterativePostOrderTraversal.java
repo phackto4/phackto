@@ -35,9 +35,9 @@ public class IterativePostOrderTraversal{
 	static ArrayList<Integer> iterativePostOrder(Node node){
 		list =new ArrayList<Integer>();
 	
-		if(node==null)
+		if(node==null){
 			return list;
-		
+		}
 		Stack<Node> s= new Stack<Node>();
 		
 		s.push(node);
@@ -52,8 +52,8 @@ public class IterativePostOrderTraversal{
 					
 					if(current.left!=null)
 						s.push(current.left);
-					else if(current.right!=null)
-						s.push(current.right);
+					else if(current.right!=null){
+						s.push(current.right);}
 					else{
 						s.pop();
 						list.add(current.key);
