@@ -55,9 +55,9 @@ public class BinaryTree{
 	
 	void postorderTraversal(Node node){
 		
-		if(node==null)
+		if(node==null){
 			return;
-		
+		}
 		postorderTraversal(node.left);
 		postorderTraversal(node.right);
 		System.out.print(node.key+" ");
@@ -93,8 +93,9 @@ public class BinaryTree{
 	
 	void printGivenLevel(Node node,int level){
 
-		if(node==null)
+		if(node==null){
 			return;
+		}
 		if(level==1){
 			System.out.print(node.key+" ");
 		}
