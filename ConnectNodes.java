@@ -27,9 +27,9 @@ public class ConnectNodes{
 	
 	void inorderTraversal(Node node){
 		
-		if(node==null)
+		if(node==null){
 			return;
-		
+		}
 		inorderTraversal(node.left);
 		System.out.print(node.key+" ");
 		inorderTraversal(node.right);
@@ -80,13 +80,13 @@ public class ConnectNodes{
 				inode=inode.nextRight;
 			}
 			
-			if(node.left!=null)
-				node=node.left;
-			else if(node.right!=null)
-				node=node.right;
-			else
+			if(node.left!=null){
+				node=node.left;}
+			else if(node.right!=null){
+				node=node.right;}
+			else{
 				node=getNextRight(node);
-			
+			}
 		}
 		
 	}
